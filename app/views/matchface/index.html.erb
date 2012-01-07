@@ -1,0 +1,13 @@
+<%=@result%>
+<h1>Submit two image URLs</h1>
+<form method="GET" action="/">
+Image #1: <input type="text" size="120" name="image1" value="<%=params[:image1]%>" /><br/>
+Image #2: <input type="text" size="120" name="image2" value="<%=params[:image2]%>" /><br/>
+<input type="submit" value="Submit" />
+</form>
+<br/><br/>
+<% if params[:image1].present? %>
+<img src="<%=@public_dir%>/i1.jpg" />
+&nbsp;&nbsp;
+<img src="<%=@public_dir%>/i2.jpg" />
+<% end %>
